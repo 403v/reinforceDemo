@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AOU</title>
-    <base href="/reinforceDemo/">
+    <title>Instructor Details - AOU</title>
     <script>
       (function applyStoredTheme() {
         try {
@@ -17,36 +16,364 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="assets/styles/global.css" />
-    <link rel="stylesheet" href="components/header/header.css" />
-    <link rel="stylesheet" href="components/hero/hero.css" />
-    <link rel="stylesheet" href="components/trusted-by/trusted-by.css" />
-    <link rel="stylesheet" href="components/featured-courses/featured-courses.css" />
-    <link rel="stylesheet" href="components/top-courses-week/top-courses-week.css" />
-    <link rel="stylesheet" href="components/micro-credential-courses/micro-credential-courses.css" />
-    <link rel="stylesheet" href="components/instructors-preview/instructors-preview.css" />
-    <link rel="stylesheet" href="components/testimonials/testimonials.css" />
-    <link rel="stylesheet" href="components/enrollment-cta/enrollment-cta.css" />
-    <link rel="stylesheet" href="components/footer/footer.css" />
-    <script defer src="assets/js/theme.js"></script>
-    <script defer src="index.js"></script>
+    <script>
+      (function applyStoredLanguage() {
+        try {
+          var savedLanguage = localStorage.getItem('app-language');
+          var language = savedLanguage === 'ar' ? 'ar' : 'en';
+          document.documentElement.setAttribute('lang', language);
+          document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
+        } catch (error) {
+          document.documentElement.setAttribute('lang', 'en');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="../../assets/styles/global.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="./instructor-details.css" />
+    <script defer src="../../assets/js/theme.js"></script>
+    <script defer src="./index.js"></script>
   </head>
   <body>
-    <div id="app-home">
+    <div id="app-instructor-details" class="instructor-details-page">
       <div id="header-mount" data-component="header" aria-live="polite"></div>
+
       <main>
-        <div class="home-hero-featured-surface">
-          <div id="hero-mount" data-component="hero" aria-live="polite"></div>
-          <!-- <div id="trusted-by-mount" data-component="trusted-by" aria-live="polite"></div> -->
-          <div id="featured-courses-mount" data-component="featured-courses" aria-live="polite"></div>
-        </div>
-        <div id="top-courses-week-mount" data-component="top-courses-week" aria-live="polite"></div>
-        <div id="micro-credential-courses-mount" data-component="micro-credential-courses" aria-live="polite"></div>
-        <div id="instructors-preview-mount" data-component="instructors-preview" aria-live="polite"></div>
-        <div id="testimonials-mount" data-component="testimonials" aria-live="polite"></div>
-        <div id="enrollment-cta-mount" data-component="enrollment-cta" aria-live="polite"></div>
-        <div id="trusted-by-mount" data-component="trusted-by" aria-live="polite"></div>
+        <section class="instructor-hero">
+          <div class="container instructor-hero-inner">
+            <div class="instructor-hero-copy">
+              <p class="instructor-eyebrow reveal-up">Mentor Profile</p>
+              <h1 class="instructor-name home-headline reveal-up stagger-1">Dr. Mohammed Hamoury</h1>
+              <p class="instructor-title reveal-up stagger-2">Learning Experience Strategist, Cybersecurity Mentor, and Executive Trainer</p>
+              <p class="instructor-summary reveal-up stagger-3">
+                Dr. Hamoury blends academic rigor with practical industry insight to deliver courses that are precise, modern, and deeply applicable. His teaching style is measured, clear, and designed to help learners build confidence fast.
+              </p>
+
+              <div class="instructor-stats-grid reveal-up stagger-4">
+                <article class="stat-card">
+                  <span class="stat-value">4.9/5</span>
+                  <span class="stat-label">Instructor rating</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">38K+</span>
+                  <span class="stat-label">Learners reached</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">21</span>
+                  <span class="stat-label">Published courses</span>
+                </article>
+                <article class="stat-card">
+                  <span class="stat-value">15+ yrs</span>
+                  <span class="stat-label">Field experience</span>
+                </article>
+              </div>
+
+              <div class="instructor-cta-row reveal-up stagger-4">
+                <a class="primary-cta" href="#courses">Explore Courses</a>
+                <a class="secondary-cta" href="#contact">Book a Session</a>
+              </div>
+            </div>
+
+            <div class="instructor-hero-media reveal-up stagger-2">
+              <div class="hero-image-frame">
+                <img src="../../assets/images/instructorsImages/hamouri.png" alt="Portrait of Dr. Mohammed Hamoury" />
+              </div>
+              <div class="hero-highlight-card">
+                <p>Signature Focus</p>
+                <strong>Security, leadership, and practical digital transformation</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="instructor-about-section">
+          <div class="container instructor-about-grid">
+            <div class="content-panel reveal-up">
+              <p class="section-eyebrow">About Mentor</p>
+              <h2 class="section-title home-headline">Teaching with structure, clarity, and applied expertise</h2>
+              <!-- <p>
+                Dr. Hamoury focuses on high-signal learning experiences that respect the learner's time. His courses emphasize foundations first, then move into real-world application, case studies, and practical decision-making.
+              </p> -->
+              <!-- <p>
+                He is especially known for translating complex technical and strategic topics into guidance that feels direct, actionable, and immediately useful for students and working professionals.
+              </p> -->
+              <div class="mentor-points">
+                <div class="mentor-point">
+                  <span class="mentor-point-label">Approach</span>
+                  <span class="mentor-point-value">Structured, high-clarity instruction</span>
+                </div>
+                <div class="mentor-point">
+                  <span class="mentor-point-label">Audience</span>
+                  <span class="mentor-point-value">Students, graduates, and professionals</span>
+                </div>
+                <div class="mentor-point">
+                  <span class="mentor-point-label">Style</span>
+                  <span class="mentor-point-value">Direct, practical, and mentor-led</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-panel reveal-up stagger-1">
+              <div class="video-shell">
+                <video class="mentor-video" controls preload="metadata" poster="../../assets/images/instructorsImages/hamouri.png">
+                  <source src="../../assets/videos/hamouri.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p class="video-caption">Intro video: a short mentor overview and teaching philosophy from Dr. Hamoury.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="expertise-section">
+          <div class="container">
+            <div class="section-heading reveal-up">
+              <p class="section-eyebrow">Skills and Expertise</p>
+              <h2 class="section-title home-headline">Core areas covered in his instruction</h2>
+            </div>
+            <div class="tags-wrap reveal-up stagger-1">
+              <span class="skill-tag">Cybersecurity Strategy</span>
+              <span class="skill-tag">Digital Transformation</span>
+              <span class="skill-tag">Leadership</span>
+              <span class="skill-tag">Risk Management</span>
+              <span class="skill-tag">Compliance</span>
+              <span class="skill-tag">Executive Coaching</span>
+              <span class="skill-tag">Security Operations</span>
+              <span class="skill-tag">Learning Design</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+          <div class="container">
+            <div class="section-heading reveal-up">
+              <p class="section-eyebrow">Courses by Instructor</p>
+              <h2 class="section-title home-headline">Popular learning paths led by Dr. Hamoury</h2>
+            </div>
+
+            <div class="courses-grid">
+              <article class="course-card reveal-up stagger-1">
+                <div class="course-card-image">
+                  <img src="../../assets/images/FeaturedCourses/Cybercrime.jpg" alt="Cybercrime Investigation course cover" />
+                  <span class="course-badge">Best Seller</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-card-topline">
+                    <h3 class="course-title">Cybercrime Investigation</h3>
+                    <div class="course-rating">
+                      <span>4.9</span>
+                    </div>
+                  </div>
+                  <p class="course-description">Learn modern investigation techniques, evidence handling, and digital response workflows.</p>
+                  <div class="course-meta-row">
+                    <span>18,420 students</span>
+                    <span>Beginner friendly</span>
+                  </div>
+                  <div class="course-card-footer">
+                    <strong class="course-price">Free</strong>
+                    <a href="#contact" class="course-link">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="course-card reveal-up stagger-2">
+                <div class="course-card-image">
+                  <img src="../../assets/images/FeaturedCourses/blockchain.jpg" alt="Blockchain Fundamentals course cover" />
+                  <span class="course-badge course-badge-secondary">Top Rated</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-card-topline">
+                    <h3 class="course-title">Blockchain Fundamentals</h3>
+                    <div class="course-rating">
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                  <p class="course-description">Build a clear understanding of blockchain, trust models, and applied enterprise use cases.</p>
+                  <div class="course-meta-row">
+                    <span>12,510 students</span>
+                    <span>Intermediate</span>
+                  </div>
+                  <div class="course-card-footer">
+                    <strong class="course-price">25 KWD</strong>
+                    <a href="#contact" class="course-link">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="course-card reveal-up stagger-3">
+                <div class="course-card-image">
+                  <img src="../../assets/images/TopCourses/EthicalH.jpg" alt="Ethical Hacking Essentials course cover" />
+                </div>
+                <div class="course-card-body">
+                  <div class="course-card-topline">
+                    <h3 class="course-title">Ethical Hacking Essentials</h3>
+                    <div class="course-rating">
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                  <p class="course-description">A practical introduction to adversarial thinking, defense, and security testing basics.</p>
+                  <div class="course-meta-row">
+                    <span>9,680 students</span>
+                    <span>Advanced</span>
+                  </div>
+                  <div class="course-card-footer">
+                    <strong class="course-price">40 KWD</strong>
+                    <a href="#contact" class="course-link">View details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials-section">
+          <div class="container">
+            <div class="section-heading reveal-up">
+              <p class="section-eyebrow">Testimonials</p>
+              <h2 class="section-title home-headline">What learners say about the instructor</h2>
+            </div>
+
+            <div class="testimonials-grid instructor-testimonials-grid">
+              <article class="review-card reveal-up stagger-1">
+                <div class="review-header">
+                  <div class="review-avatar">NA</div>
+                  <div class="review-info">
+                    <h3>Noura A.</h3>
+                    <p>Graduate learner</p>
+                  </div>
+                </div>
+                <p class="review-copy">"The instruction is sharp and structured. I always leave with a better framework for applying what I learned."</p>
+              </article>
+
+              <article class="review-card reveal-up stagger-2">
+                <div class="review-header">
+                  <div class="review-avatar">KM</div>
+                  <div class="review-info">
+                    <h3>Khaled M.</h3>
+                    <p>Working professional</p>
+                  </div>
+                </div>
+                <p class="review-copy">"He explains difficult topics in a way that feels practical, calm, and immediately useful in my role."</p>
+              </article>
+
+              <article class="review-card reveal-up stagger-3">
+                <div class="review-header">
+                  <div class="review-avatar">LS</div>
+                  <div class="review-info">
+                    <h3>Layla S.</h3>
+                    <p>Executive learner</p>
+                  </div>
+                </div>
+                <p class="review-copy">"The mix of strategy and application is excellent. It feels like mentorship, not just a lecture."</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="credentials-section">
+          <div class="container credentials-grid">
+            <div class="content-panel reveal-up">
+              
+              <h2 class="section-title home-headline">A profile built on applied expertise</h2>
+              <p class="section-eyebrow">Credentials & Experience</p>
+            </div>
+
+            <div class="timeline-panel reveal-up stagger-1">
+              <div class="timeline-item">
+                <span class="timeline-year">2025</span>
+                <div>
+                  <h3>Executive learning track lead</h3>
+                  <p>Developed mentor-led modules for senior professionals and academic cohorts.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2021</span>
+                <div>
+                  <h3>Cybersecurity curriculum advisor</h3>
+                  <p>Guided course design for practical security operations and risk programs.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2014</span>
+                <div>
+                  <h3>Industry and higher-ed mentor</h3>
+                  <p>Supported learners across technical, strategic, and leadership-focused programs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <div class="container">
+            <div class="section-heading reveal-up">
+              <p class="section-eyebrow">FAQ</p>
+              <h2 class="section-title home-headline">Common questions about Dr. Hamoury's teaching</h2>
+            </div>
+
+            <div class="faq-list reveal-up stagger-1" id="mentor-faq">
+              <article class="faq-item is-active">
+                <button class="faq-question" type="button" aria-expanded="true">
+                  What kind of learner benefits most from these courses?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" style="max-height: 180px;">
+                  <p>Students who want structure, clear guidance, and practical application will benefit most from his approach.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Are the courses suitable for beginners?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. Several learning paths start with fundamentals and gradually move toward more advanced material.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Does he offer mentorship beyond recorded lessons?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Selected programs include live office hours, feedback checkpoints, and guided support options.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Which topics are covered most often?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Cybersecurity, leadership, digital transformation, and practical strategy are recurring themes in his material.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="mentor-cta-section">
+          <div class="container">
+            <div class="mentor-cta-card reveal-up">
+              <div>
+                <p class="section-eyebrow">Take the Next Step</p>
+                <h2 class="home-headline">Learn with a mentor who values clarity and outcomes</h2>
+                <p>Explore the available courses or request a guided session with Dr. Hamoury to find the best learning path.</p>
+              </div>
+              <div class="mentor-cta-actions">
+                <a class="primary-cta" href="#courses">Browse courses</a>
+                <a class="secondary-cta" href="/reinforceDemo/pages/pricing/">See plans</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
       <div id="footer-mount" data-component="footer" aria-live="polite"></div>
     </div>
   </body>

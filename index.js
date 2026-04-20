@@ -19,13 +19,14 @@ function renderBootstrapMessage(title, details) {
 function normalizeHomePartialPaths(html) {
   return html
     .replaceAll('../../assets/', './assets/')
-    .replaceAll('href="/pages/home/"', 'href="./"')
-    .replaceAll('href="/pages/pricing/"', 'href="./pages/pricing/"')
-    .replaceAll('href="/pages/instructor-details/"', 'href="./pages/instructor-details/"')
-    .replaceAll('href="../course-details/"', 'href="./pages/course-details/"')
-    .replaceAll('href="/micro-credentials"', 'href="#micro-credential-courses-mount"')
-    .replaceAll('href="/instructors"', 'href="#instructors-preview-mount"')
-    .replaceAll('href="/"', 'href="./"');
+    .replaceAll('href="/pages/home/"', 'href="/reinforceDemo/"')
+    .replaceAll('href="/pages/pricing/"', 'href="/reinforceDemo/pages/pricing/"')
+    .replaceAll('href="/pages/instructor-details/"', 'href="/reinforceDemo/pages/instructor-details/"')
+    .replaceAll('href="../course-details/"', 'href="/reinforceDemo/pages/course-details/"')
+    .replaceAll('href="/micro-credentials"', 'href="/reinforceDemo/"')
+    .replaceAll('href="/instructors"', 'href="/reinforceDemo/"')
+    .replaceAll('href="/enrollment/sign-up"', 'href="/reinforceDemo/"')
+    .replaceAll('href="/"', 'href="/reinforceDemo/"');
 }
 
 async function mountComponent(mountId, partialPath) {
