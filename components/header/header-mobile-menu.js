@@ -201,3 +201,5 @@ const MobileMenu = (() => {
     destroy
   };
 })();
+
+window.MobileMenu = MobileMenu;

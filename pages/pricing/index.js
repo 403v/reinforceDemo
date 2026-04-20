@@ -19,23 +19,32 @@ async function mountComponent(mountId, partialPath) {
 /**
  * Dynamically load and initialize the mobile menu system
  */
-async function initMobileMenu() {
-  try {
-    const response = await fetch('/reinforceDemo/components/header/header-mobile-menu.js', { cache: 'no-store' });
-    if (response.ok) {
-      const scriptText = await response.text();
-      const script = document.createElement('script');
-      script.textContent = scriptText;
-      document.head.appendChild(script);
-      
-      // Initialize the mobile menu after script is loaded
+function initMobileMenu() {
+  return new Promise((resolve, reject) => {
+    if (window.MobileMenu) {
+      window.MobileMenu.init();
+      resolve();
+      return;
+    }
+
+    if (document.querySelector('script[data-mobile-menu-script]')) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = '/reinforceDemo/components/header/header-mobile-menu.js';
+    script.defer = true;
+    script.dataset.mobileMenuScript = 'true';
+    script.onload = () => {
       if (window.MobileMenu) {
         window.MobileMenu.init();
       }
-    }
-  } catch (error) {
-    console.error('Failed to load mobile menu script:', error);
-  }
+      resolve();
+    };
+    script.onerror = () => reject(new Error('Failed to load mobile menu script'));
+    document.head.appendChild(script);
+  });
 }
 
 async function composePricingPage() {
