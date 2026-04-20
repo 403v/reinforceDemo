@@ -23,7 +23,7 @@ const MobileMenu = (() => {
     menuToggle = document.querySelector('[data-mobile-menu-toggle]');
     menuOverlay = document.querySelector('[data-mobile-nav-overlay]');
     menuDrawer = document.querySelector('[data-mobile-nav-drawer]');
-    menuLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-join-btn');
+    menuLinks = document.querySelectorAll('.mobile-nav-link');
 
     if (!menuToggle || !menuOverlay || !menuDrawer) {
       console.warn('Mobile menu elements not found in DOM');

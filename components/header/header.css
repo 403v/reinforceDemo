@@ -274,12 +274,6 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .header-actions {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   .site-nav {
     display: flex;
@@ -460,78 +454,6 @@
 .mobile-nav-link:focus-visible {
   outline: 2px solid var(--app-color-focus-ring);
   outline-offset: -2px;
-}
-
-.mobile-nav-utilities {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem 1.25rem 1.25rem;
-  border-top: 1px solid var(--app-color-border-soft);
-}
-
-.mobile-nav-tools {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.mobile-nav-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  border-radius: 999px;
-  border: 1px solid var(--app-color-input-border);
-  background: var(--app-color-input-bg);
-  color: var(--app-color-on-surface);
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.mobile-nav-icon-btn:hover,
-.mobile-nav-icon-btn:focus-visible {
-  background: var(--app-color-hover-soft);
-  border-color: var(--app-color-border-regular);
-  transform: translateY(-1px);
-}
-
-.mobile-nav-theme-toggle {
-  gap: 0.35rem;
-  padding: 0.55rem 0.75rem;
-}
-
-.mobile-nav-join-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 999px;
-  background: var(--app-color-deep-yellow);
-  color: var(--app-color-brand-contrast);
-  border: 1px solid var(--app-color-border-regular);
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 0.85rem 1rem;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.mobile-nav-join-btn:hover,
-.mobile-nav-join-btn:focus-visible {
-  background: var(--app-color-action-yellow-hover);
-  color: var(--app-color-brand-contrast);
-  border-color: transparent;
-  box-shadow: 0 0 20px rgba(243, 178, 0, 0.35);
-  transform: translateY(-2px);
-}
-
-.mobile-nav-join-btn:focus-visible {
-  outline: 2px solid var(--app-color-focus-ring);
-  outline-offset: 2px;
 }
 
 /* ===== Mobile Menu Responsive Behavior ===== */
