@@ -1,0 +1,131 @@
+.instructors-preview-section {
+  background: var(--app-color-surface);
+  padding: 5rem 0;
+}
+
+.instructors-preview-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.instructors-preview-eyebrow {
+  margin: 0;
+  color: var(--app-color-on-surface);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.instructors-preview-title {
+  margin: 0.5rem 0 0;
+  color: var(--app-color-on-surface);
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+.instructors-preview-nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.instructors-preview-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--app-color-border-regular);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--app-color-on-surface);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.instructors-preview-nav-button:hover {
+  background: var(--app-color-secondary);
+  color: var(--app-color-on-secondary);
+  border-color: var(--app-color-secondary);
+}
+
+.instructors-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.instructors-preview-card {
+  text-align: center;
+}
+
+.instructors-preview-card-link {
+  display: block;
+  color: inherit;
+}
+
+.instructors-preview-avatar-frame {
+  display: inline-block;
+  margin-bottom: 1rem;
+  border: 4px solid var(--app-color-border-soft);
+  border-radius: 999px;
+  padding: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+
+.instructors-preview-card:hover .instructors-preview-avatar-frame {
+  border-color: var(--app-color-deep-yellow);
+}
+
+.instructors-preview-avatar-frame img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.instructors-preview-name {
+  margin: 0;
+  color: var(--app-color-on-surface);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.instructors-preview-role {
+  margin: 0.25rem 0 0;
+  color: var(--app-color-on-surface-variant);
+  font-size: 0.75rem;
+}
+
+.instructors-preview-footer {
+  text-align: center;
+}
+
+.instructors-preview-view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--app-color-on-surface);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.instructors-preview-view-all-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .instructors-preview-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .instructors-preview-avatar-frame img {
+    width: 12rem;
+    height: 12rem;
+  }
+}

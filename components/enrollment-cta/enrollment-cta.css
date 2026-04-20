@@ -1,0 +1,79 @@
+.enrollment-cta-section {
+  background: var(--app-section-bg-enrollment);
+  padding: 4rem 0;
+}
+
+.enrollment-cta-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--app-color-border-regular);
+  border-radius: 0.75rem;
+  background: var(--app-color-panel-soft);
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.enrollment-cta-content {
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.enrollment-cta-title {
+  margin: 0;
+  color: var(--app-color-on-surface);
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.enrollment-cta-description {
+  margin: 0;
+  color: var(--app-color-on-primary-container);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.enrollment-cta-button {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--app-radius-token);
+  background: var(--app-color-deep-yellow);
+  color: var(--app-color-brand-contrast);
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.enrollment-cta-button:hover {
+  background: var(--app-color-action-yellow-hover);
+}
+
+.enrollment-cta-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+}
+
+.enrollment-cta-overlay-gradient {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, var(--app-color-primary), transparent 65%);
+}
+
+@media (min-width: 768px) {
+  .enrollment-cta-card {
+    padding: 3rem;
+  }
+
+  .enrollment-cta-title {
+    font-size: 2.25rem;
+  }
+}

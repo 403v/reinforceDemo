@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - AOU</title>
+    <script>
+      (function applyStoredTheme() {
+        try {
+          var savedTheme = localStorage.getItem('app-theme');
+          if (savedTheme === 'light' || savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          }
+        } catch (error) {
+          // Ignore storage access failures.
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="../../assets/styles/global.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="./pricing.css" />
+
+    <script defer src="../../assets/js/theme.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app-pricing" class="pricing-page">
+      <div id="header-mount" data-component="header" aria-live="polite"></div>
+
+      <main>
+        <section class="pricing-hero">
+          <div class="container pricing-hero-inner">
+            <span class="pricing-eyebrow reveal-up">Transparent Plans</span>
+            <h1 class="pricing-title home-headline reveal-up stagger-1">Flexible Learning Plans for Every Stage</h1>
+            <p class="pricing-subtitle reveal-up stagger-2">
+              Pick the plan that matches your journey, from student access to professional upskilling, with clear pricing and trusted support.
+            </p>
+            <a class="pricing-hero-cta reveal-up stagger-3" href="#plans">View Plans</a>
+          </div>
+        </section>
+
+        <section id="plans" class="pricing-plans-section">
+          <div class="container">
+            <div class="pricing-section-header reveal-up">
+              <span class="pricing-section-eyebrow">Plans</span>
+              <h2 class="pricing-section-title home-headline">Choose Your Access</h2>
+            </div>
+
+            <div class="pricing-cards-grid">
+              <article class="pricing-card reveal-up stagger-1" aria-label="AOU Students plan">
+                <header class="pricing-card-header">
+                  <h3 class="pricing-card-title home-headline">AOU Students</h3>
+                  <p class="pricing-card-price">Free</p>
+                </header>
+                <p class="pricing-card-description">Full platform access for currently enrolled AOU students.</p>
+                <ul class="pricing-feature-list">
+                  <li>Unlimited access to core courses</li>
+                  <li>Student-only live sessions</li>
+                  <li>Certificate eligibility for select tracks</li>
+                  <li>Academic support resources</li>
+                </ul>
+                <a class="pricing-card-cta" href="#">Activate Student Access</a>
+              </article>
+
+              <article class="pricing-card pricing-card-popular reveal-up stagger-2" aria-label="Graduates plan">
+                <span class="pricing-popular-badge">Most Popular</span>
+                <header class="pricing-card-header">
+                  <h3 class="pricing-card-title home-headline">Graduates</h3>
+                  <p class="pricing-card-price">25 KWD <span>/ month</span></p>
+                </header>
+                <p class="pricing-card-description">Special discounted pricing for AOU alumni ready to keep growing.</p>
+                <ul class="pricing-feature-list">
+                  <li>Everything in Student Access</li>
+                  <li>Priority mentorship office hours</li>
+                  <li>Career-oriented learning paths</li>
+                  <li>Discounted certification bundles</li>
+                </ul>
+                <a class="pricing-card-cta pricing-card-cta-primary" href="#">Claim Graduate Discount</a>
+              </article>
+
+              <article class="pricing-card reveal-up stagger-3" aria-label="Standard plan">
+                <header class="pricing-card-header">
+                  <h3 class="pricing-card-title home-headline">Standard Plan</h3>
+                  <p class="pricing-card-price">40 KWD <span>/ month</span></p>
+                </header>
+                <p class="pricing-card-description">Premium learning access for non-AOU users with full flexibility.</p>
+                <ul class="pricing-feature-list">
+                  <li>All premium course categories</li>
+                  <li>Professional certificate pathways</li>
+                  <li>Weekly expert Q and A sessions</li>
+                  <li>Personalized progress dashboard</li>
+                </ul>
+                <a class="pricing-card-cta" href="#">Start Standard Plan</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-comparison-section">
+          <div class="container">
+            <div class="pricing-section-header reveal-up">
+              <span class="pricing-section-eyebrow">Comparison</span>
+              <h2 class="pricing-section-title home-headline">Features at a Glance</h2>
+            </div>
+
+            <div class="pricing-table-wrap reveal-up stagger-1" role="region" aria-label="Pricing plans comparison table">
+              <table class="pricing-comparison-table">
+                <caption class="visually-hidden">Compare included features across plans</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Feature</th>
+                    <th scope="col">AOU Students</th>
+                    <th scope="col">Graduates</th>
+                    <th scope="col">Standard Plan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Course Library Access</th>
+                    <td>Core Library</td>
+                    <td>Core + Career Tracks</td>
+                    <td>Full Premium Library</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Certificates</th>
+                    <td>Selected Certificates</td>
+                    <td>Discounted Bundles</td>
+                    <td>All Certificate Tracks</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mentor Support</th>
+                    <td>Community Support</td>
+                    <td>Priority Office Hours</td>
+                    <td>Weekly Expert Sessions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Schedule Flexibility</th>
+                    <td>Self-paced</td>
+                    <td>Self-paced + Milestones</td>
+                    <td>Self-paced + Guided Paths</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Refund Eligibility</th>
+                    <td>Not Applicable</td>
+                    <td>7-Day Policy</td>
+                    <td>7-Day Policy</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-value-section">
+          <div class="container">
+            <div class="pricing-section-header reveal-up">
+              <span class="pricing-section-eyebrow">Why Choose Us</span>
+              <h2 class="pricing-section-title home-headline">Built for Skills, Certificates, and Flexibility</h2>
+            </div>
+
+            <div class="pricing-value-grid">
+              <article class="pricing-value-card reveal-up stagger-1">
+                <div class="pricing-value-icon" aria-hidden="true">01</div>
+                <h3 class="home-headline">Industry-Relevant Skills</h3>
+                <p>Hands-on learning paths designed around real job roles in cybersecurity, cloud, and software engineering.</p>
+              </article>
+              <article class="pricing-value-card reveal-up stagger-2">
+                <div class="pricing-value-icon" aria-hidden="true">02</div>
+                <h3 class="home-headline">Recognized Certificates</h3>
+                <p>Earn practical certificates that strengthen your professional profile and showcase measurable progress.</p>
+              </article>
+              <article class="pricing-value-card reveal-up stagger-3">
+                <div class="pricing-value-icon" aria-hidden="true">03</div>
+                <h3 class="home-headline">Flexible Learning Experience</h3>
+                <p>Learn anytime with self-paced modules, mentor checkpoints, and structured tracks when you need guidance.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-testimonials-section">
+          <div class="container">
+            <div class="pricing-section-header reveal-up">
+              <span class="pricing-section-eyebrow">Testimonials</span>
+              <h2 class="pricing-section-title home-headline">Learners Share Their Results</h2>
+            </div>
+
+            <div class="pricing-testimonials-grid">
+              <article class="pricing-testimonial-card reveal-up stagger-1">
+                <p class="pricing-testimonial-quote">"The graduate plan gave me structure and mentorship. I completed two certificate paths and landed a promotion in six months."</p>
+                <p class="pricing-testimonial-author">Noura A. - AOU Graduate</p>
+              </article>
+              <article class="pricing-testimonial-card reveal-up stagger-2">
+                <p class="pricing-testimonial-quote">"As an AOU student, free access helped me build skills beyond the classroom. The platform made learning consistent and practical."</p>
+                <p class="pricing-testimonial-author">Khaled M. - Computer Science Student</p>
+              </article>
+              <article class="pricing-testimonial-card reveal-up stagger-3">
+                <p class="pricing-testimonial-quote">"The standard plan is worth it. I moved from basic knowledge to project-ready confidence with clear learning paths and support."</p>
+                <p class="pricing-testimonial-author">Layla S. - Professional Learner</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-faq-section">
+          <div class="container">
+            <div class="pricing-section-header reveal-up">
+              <span class="pricing-section-eyebrow">FAQ</span>
+              <h2 class="pricing-section-title home-headline">Common Questions</h2>
+            </div>
+
+            <div class="pricing-faq-list reveal-up stagger-1">
+              <article class="pricing-faq-item is-active">
+                <button class="pricing-faq-question" type="button" aria-expanded="true">
+                  Who can access the AOU Students plan?
+                  <span class="pricing-faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="pricing-faq-answer" style="max-height: 120px;">
+                  <p>The free student plan is available to currently enrolled AOU students with valid academic verification.</p>
+                </div>
+              </article>
+
+              <article class="pricing-faq-item">
+                <button class="pricing-faq-question" type="button" aria-expanded="false">
+                  How do I qualify for the Graduates discount?
+                  <span class="pricing-faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="pricing-faq-answer">
+                  <p>Graduates can unlock discounted pricing by verifying alumni status through the platform profile process.</p>
+                </div>
+              </article>
+
+              <article class="pricing-faq-item">
+                <button class="pricing-faq-question" type="button" aria-expanded="false">
+                  Is there a refund policy for paid plans?
+                  <span class="pricing-faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="pricing-faq-answer">
+                  <p>Yes. Paid plans include a simple 7-day refund policy if you are not satisfied after subscribing.</p>
+                </div>
+              </article>
+
+              <article class="pricing-faq-item">
+                <button class="pricing-faq-question" type="button" aria-expanded="false">
+                  Can I switch plans later?
+                  <span class="pricing-faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="pricing-faq-answer">
+                  <p>You can upgrade from Student or Graduate access to Standard at any time from your account settings.</p>
+                </div>
+              </article>
+
+              <article class="pricing-faq-item">
+                <button class="pricing-faq-question" type="button" aria-expanded="false">
+                  How secure are payments?
+                  <span class="pricing-faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="pricing-faq-answer">
+                  <p>All transactions are processed through secure payment gateways with industry-standard encryption.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-trust-section">
+          
+            <div class="pricing-final-cta reveal-up stagger-2">
+              <h2 class="home-headline">Start Learning with Confidence</h2>
+              <p>Choose your plan and begin your next milestone today.</p>
+              <a href="#plans" class="pricing-final-cta-button">Choose a Plan</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer-mount" data-component="footer" aria-live="polite"></div>
+    </div>
+  </body>
+</html>

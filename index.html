@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="./" />
+    <title>AOU</title>
+    <script>
+      (function applyStoredTheme() {
+        try {
+          var savedTheme = localStorage.getItem('app-theme');
+          if (savedTheme === 'light' || savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          }
+        } catch (error) {
+          // Ignore storage access failures.
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./components/header/header.css" />
+    <link rel="stylesheet" href="./components/hero/hero.css" />
+    <link rel="stylesheet" href="./components/trusted-by/trusted-by.css" />
+    <link rel="stylesheet" href="./components/featured-courses/featured-courses.css" />
+    <link rel="stylesheet" href="./components/top-courses-week/top-courses-week.css" />
+    <link rel="stylesheet" href="./components/micro-credential-courses/micro-credential-courses.css" />
+    <link rel="stylesheet" href="./components/instructors-preview/instructors-preview.css" />
+    <link rel="stylesheet" href="./components/testimonials/testimonials.css" />
+    <link rel="stylesheet" href="./components/enrollment-cta/enrollment-cta.css" />
+    <link rel="stylesheet" href="./components/footer/footer.css" />
+    <script defer src="./assets/js/theme.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app-home">
+      <div id="header-mount" data-component="header" aria-live="polite"></div>
+      <main>
+        <div class="home-hero-featured-surface">
+          <div id="hero-mount" data-component="hero" aria-live="polite"></div>
+          <!-- <div id="trusted-by-mount" data-component="trusted-by" aria-live="polite"></div> -->
+          <div id="featured-courses-mount" data-component="featured-courses" aria-live="polite"></div>
+        </div>
+        <div id="top-courses-week-mount" data-component="top-courses-week" aria-live="polite"></div>
+        <div id="micro-credential-courses-mount" data-component="micro-credential-courses" aria-live="polite"></div>
+        <div id="instructors-preview-mount" data-component="instructors-preview" aria-live="polite"></div>
+        <div id="testimonials-mount" data-component="testimonials" aria-live="polite"></div>
+        <div id="enrollment-cta-mount" data-component="enrollment-cta" aria-live="polite"></div>
+        <div id="trusted-by-mount" data-component="trusted-by" aria-live="polite"></div>
+      </main>
+      <div id="footer-mount" data-component="footer" aria-live="polite"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,545 @@
+/* --- App Variables (from global) ---
+   We will reference these mainly:
+   --app-color-bg, --app-color-surface, --app-color-fg, etc.
+*/
+
+/* --- Course Details Layout --- */
+.course-details-page {
+  padding-top: 80px; /* Space for fixed header */
+  background: var(--app-color-bg);
+  min-height: 100vh;
+}
+
+/* --- Hero Section --- */
+.course-hero {
+  background: radial-gradient(circle at top left, var(--app-color-primary-container) 0%, var(--app-color-bg) 70%);
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--app-color-border);
+}
+
+.course-hero-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .course-hero-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.course-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-hero-eyebrow {
+  color: var(--app-color-on-surface);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.course-hero-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--app-color-on-surface);
+}
+
+@media (min-width: 900px) {
+  .course-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+.course-hero-tagline {
+  font-size: 1.125rem;
+  color: var(--app-color-on-surface);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--app-color-on-surface);
+}
+
+.course-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.course-meta-item svg {
+  color: var(--app-color-deep-yellow);
+}
+
+.instructor-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.instructor-badge img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--app-color-border);
+}
+
+.instructor-badge-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--app-color-fg);
+  font-weight: 600;
+}
+
+.instructor-badge-info span {
+  font-size: 0.75rem;
+  color: var(--app-color-muted);
+}
+
+.course-hero-media {
+  position: relative;
+  border-radius: var(--app-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--app-shadow-institutional);
+  aspect-ratio: 16 / 9;
+}
+
+.course-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: var(--app-color-panel-soft);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--app-color-border-regular);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--app-color-on-surface);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--app-color-primary);
+  color: var(--app-color-on-primary);
+}
+
+/* --- Main Layout: Content + Sticky Sidebar --- */
+.course-main-section {
+  padding: 4rem 0;
+  background: radial-gradient(circle at top left, var(--app-color-primary-container) 0%, var(--app-color-bg) 70%);
+}
+
+.course-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .course-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.course-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* --- Block Styles --- */
+.content-block h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--app-color-fg);
+  font-family: var(--app-font-headline);
+}
+
+.content-block p {
+  color: var(--app-color-on-surface);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tag {
+  background: var(--app-color-surface-container);
+  border: 1px solid var(--app-color-border);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  color: var(--app-color-fg);
+  transition: border-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  border-color: var(--app-color-primary);
+}
+
+.learning-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .learning-points {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.learning-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.learning-point svg {
+  color: var(--app-color-secondary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.learning-point span {
+  color: var(--app-color-on-surface);
+  line-height: 1.5;
+}
+
+/* --- Curriculum Accordion --- */
+.curriculum-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  background: var(--app-color-surface-container);
+  border: 1px solid var(--app-color-border);
+  border-radius: var(--app-radius-token);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: var(--app-color-fg);
+  font-family: var(--app-font-headline);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.accordion-header:hover {
+  background: var(--app-color-surface-container-high);
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  color: var(--app-color-primary);
+}
+
+.accordion-item.is-active {
+  border-color: var(--app-color-primary);
+  background: var(--app-color-surface-container-low);
+}
+
+.accordion-item.is-active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-inner {
+  padding: 0 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--app-color-border);
+}
+
+.lesson-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.lesson-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--app-color-on-surface);
+  font-size: 0.95rem;
+}
+
+.lesson-title svg {
+  color: var(--app-color-outline);
+}
+
+.lesson-duration {
+  font-size: 0.85rem;
+  color: var(--app-color-outline);
+}
+
+/* --- Instructor Section --- */
+.instructor-profile {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: var(--app-color-surface-container);
+  padding: 2rem;
+  border-radius: var(--app-radius-xl);
+  border: 1px solid var(--app-color-border);
+}
+
+.instructor-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--app-color-surface);
+}
+
+.instructor-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--app-color-fg);
+}
+
+.instructor-title {
+  color: var(--app-color-primary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.instructor-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.instructor-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--app-color-muted);
+}
+
+/* --- Reviews Section --- */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.review-card {
+  background: var(--app-color-surface-container);
+  border: 1px solid var(--app-color-border);
+  padding: 1.5rem;
+  border-radius: var(--app-radius-token);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--app-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--app-color-on-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.review-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--app-color-fg);
+}
+
+.review-rating {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--app-color-deep-yellow);
+  margin-top: 0.25rem;
+}
+
+.review-rating svg {
+  width: 14px;
+  height: 14px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- Sticky Sidebar Card --- */
+.course-sidebar-wrapper {
+  position: sticky;
+  top: 100px; /* offset from fixed header */
+}
+
+.pricing-card {
+  background: var(--app-color-surface-container);
+  border: 1px solid var(--app-color-border);
+  border-radius: var(--app-radius-token);
+  padding: 1.5rem;
+  box-shadow: var(--app-shadow-soft);
+}
+
+.pricing-header {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--app-color-fg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-amount span {
+  font-size: 1.25rem;
+  color: var(--app-color-muted);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--app-color-deep-yellow);
+  color: var(--app-color-on-surface);
+  font-family: var(--app-font-headline);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-primary:hover {
+  background: var(--app-color-deep-yellow);
+  transform: translateY(-2px);
+  box-shadow: var(--app-shadow-soft);
+}
+
+.pricing-guarantee {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--app-color-on-surface);
+  margin-bottom: 2rem;
+}
+
+.course-includes h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--app-color-fg);
+}
+
+.course-includes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.course-includes li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--app-color-on-surface);
+  font-size: 0.95rem;
+}
+
+.course-includes li svg {
+  color: var(--app-color-deep-yellow);
+}
+
+.course-includes-divider {
+  height: 1px;
+  background: var(--app-color-border);
+  margin: 1.5rem 0;
+}
+
+/* --- Related Courses --- */
+.related-courses-section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--app-color-border);
+  background: var(--app-color-bg);
+}

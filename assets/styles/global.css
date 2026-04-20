@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --app-color-bg: #131410;
+  --app-color-surface: #131410;
+  --app-color-fg: #e4e2db;
+  --app-color-muted: #c3c6d023;
+  --app-color-border: #43474f;
+  --app-color-brand: #a7c8fc;
+  --app-color-brand-soft: #1c4f47;
+  --app-color-brand-contrast: #ffffff;
+  --app-color-primary: #a7c8fc;
+  --app-color-primary-container: #002d58;
+  --app-color-primary-fixed: #d4e3ff;
+  --app-color-on-primary: #06315c;
+  --app-color-on-primary-container: #7596c7;
+  --app-color-secondary: #9ed1c6;
+  --app-color-secondary-container: #1c4f47;
+  --app-color-secondary-fixed: #b9ede1;
+  --app-color-on-secondary: #003730;
+  --app-color-on-secondary-container: #8dbfb4;
+  --app-color-on-secondary-fixed: #00201b;
+  --app-color-tertiary: #ffb4aa;
+  --app-color-tertiary-container: #620003;
+  --app-color-on-tertiary: #690003;
+  --app-color-on-surface: #e4e2db;
+  --app-color-on-surface-variant: #c3c6d0;
+  --app-color-outline: #8d919a;
+  --app-color-outline-variant: #43474f;
+  --app-color-surface-container-low: #1b1c18;
+  --app-color-surface-container: #1f201c;
+  --app-color-surface-container-high: #2a2a26;
+  --app-color-surface-container-highest: #353530;
+  --app-color-deep-yellow: #f3b200;
+  --app-color-action-yellow-hover:#e1cb8d;
+  --app-color-action-danger: #a11a16;
+  --app-color-action-danger-hover: #ffb4aa;
+
+  --app-bg-gradient: radial-gradient(circle at top right, rgba(167, 200, 252, 0.12) 0%, var(--app-color-bg) 48%);
+  --app-color-border-soft: rgba(255, 255, 255, 0.08);
+  --app-color-border-regular: rgba(255, 255, 255, 0.12);
+  --app-color-border-strong: rgba(167, 200, 252, 0.35);
+  --app-color-hover-soft: rgba(228, 226, 219, 0.1);
+  --app-color-panel-soft: rgba(28, 79, 71, 0.14);
+  --app-color-panel-mid: rgba(28, 79, 71, 0.45);
+  --app-color-header-bg: rgba(0, 45, 88, 0.4);
+  --app-color-header-bg-scrolled: rgba(0, 45, 88, 0.85);
+  --app-color-input-bg: rgba(255, 255, 255, 0.03);
+  --app-color-input-bg-focus: rgba(255, 255, 255, 0.08);
+  --app-color-input-border: rgba(255, 255, 255, 0.1);
+  --app-color-input-focus-border: rgba(167, 200, 252, 0.3);
+  --app-color-focus-ring: rgba(167, 200, 252, 0.1);
+  --app-color-image-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  --app-color-card-tint: rgba(42, 42, 38, 0.6);
+  --app-color-bookmark-border: rgba(255, 255, 255, 0.4);
+  --app-color-bookmark-bg: rgba(0, 0, 0, 0.35);
+  --app-color-bookmark-bg-hover: rgba(0, 0, 0, 0.55);
+  --app-color-bookmark-fg: #ffffff;
+
+  --app-pricing-page-bg:
+    radial-gradient(circle at 15% 0%, rgba(49, 102, 187, 0.16), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(158, 209, 198, 0.12), transparent 42%),
+    linear-gradient(180deg, #0b2e57 0%, #0a2342 38%, #081a33 100%);
+  --app-pricing-card-bg:
+    radial-gradient(circle at top right, rgba(167, 200, 252, 0.13), transparent 55%),
+    linear-gradient(160deg, rgba(28, 79, 71, 0.22), rgba(19, 20, 16, 0.85));
+  --app-pricing-card-popular-bg:
+    radial-gradient(circle at top right, rgba(167, 200, 252, 0.2), transparent 58%),
+    linear-gradient(160deg, rgba(0, 45, 88, 0.65), rgba(19, 20, 16, 0.92));
+  --app-pricing-comparison-bg: rgba(0, 45, 88, 0.18);
+  --app-pricing-table-head-bg: rgba(19, 20, 16, 0.86);
+  --app-pricing-faq-section-bg: rgba(28, 79, 71, 0.14);
+  --app-pricing-faq-icon-bg: rgba(167, 200, 252, 0.15);
+  --app-pricing-final-cta-bg:
+    radial-gradient(circle at top right, rgba(255, 180, 170, 0.13), transparent 45%),
+    linear-gradient(150deg, rgba(0, 45, 88, 0.62), rgba(19, 20, 16, 0.95));
+
+  --app-section-bg-hero:
+    radial-gradient(64rem 30rem at -5% 0%, rgba(167, 200, 252, 0.2), transparent 56%),
+    radial-gradient(42rem 24rem at 110% 20%, rgba(158, 209, 198, 0.14), transparent 58%),
+    linear-gradient(180deg, #0b2342 0%, var(--app-color-primary-container) 54%, #081a33 100%);
+  --app-section-bg-featured:
+    radial-gradient(56rem 26rem at 12% -8%, rgba(167, 200, 252, 0.15), transparent 58%),
+    radial-gradient(40rem 24rem at 90% 26%, rgba(243, 178, 0, 0.08), transparent 62%),
+    linear-gradient(165deg, #0a2748 0%, var(--app-color-primary-container) 55%, #0a2140 100%);
+  --app-section-bg-micro:
+    radial-gradient(52rem 30rem at 0% 10%, rgba(158, 209, 198, 0.13), transparent 58%),
+    radial-gradient(48rem 24rem at 95% 15%, rgba(167, 200, 252, 0.14), transparent 60%),
+    linear-gradient(160deg, #0b2a4f 0%, var(--app-color-primary-container) 58%, #08203c 100%);
+  --app-section-bg-testimonials:
+    radial-gradient(62rem 30rem at 20% -15%, rgba(243, 178, 0, 0.1), transparent 62%),
+    radial-gradient(40rem 22rem at 100% 20%, rgba(167, 200, 252, 0.14), transparent 60%),
+    linear-gradient(170deg, #0b2445 0%, var(--app-color-primary-container) 52%, #071d38 100%);
+  --app-section-bg-enrollment:
+    radial-gradient(58rem 30rem at -10% 0%, rgba(167, 200, 252, 0.17), transparent 58%),
+    radial-gradient(42rem 24rem at 100% 18%, rgba(243, 178, 0, 0.1), transparent 62%),
+    linear-gradient(165deg, #0c2f5b 0%, var(--app-color-primary-container) 56%, #0a2342 100%);
+
+  --app-radius-token: 0.75rem;
+  --app-radius-xl: 1.25rem;
+
+  --app-font-headline: 'Manrope', 'Segoe UI', Tahoma, sans-serif;
+  --app-font-body: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+
+  --app-shadow-institutional: 0 20px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  --app-shadow-hover: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(167, 200, 252, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  --app-shadow-soft: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme='light'] {
+  --app-color-bg: #f6f8fc;
+  --app-color-surface: #ffffff;
+  --app-color-fg: #0f1a2a;
+  --app-color-muted: #5f6f85;
+  --app-color-border: #c9d2de;
+  --app-color-brand: #0f3f7a;
+  --app-color-brand-soft: #d7e3f3;
+  --app-color-brand-contrast: #111111;
+  --app-color-primary: #114a89;
+  --app-color-primary-container: #d8e8fb;
+  --app-color-primary-fixed: #0b2f5a;
+  --app-color-on-primary: #ffffff;
+  --app-color-on-primary-container: #19385c;
+  --app-color-secondary: #0e6a59;
+  --app-color-secondary-container: #d8efe9;
+  --app-color-secondary-fixed: #124f43;
+  --app-color-on-secondary: #ffffff;
+  --app-color-on-secondary-container: #16574b;
+  --app-color-on-secondary-fixed: #0f3f36;
+  --app-color-tertiary: #a11a16;
+  --app-color-tertiary-container: #ffe2df;
+  --app-color-on-tertiary: #ffffff;
+  --app-color-on-surface: #111c2e;
+  --app-color-on-surface-variant: #3b4a5e;
+  --app-color-outline: #607086;
+  --app-color-outline-variant: #b4bfcc;
+  --app-color-surface-container-low: #f5f8fc;
+  --app-color-surface-container: #edf2f8;
+  --app-color-surface-container-high: #e2e9f2;
+  --app-color-surface-container-highest: #d4deea;
+  --app-color-deep-yellow: #f3b200;
+  --app-color-action-yellow-hover: #c09100;
+  --app-color-action-danger: #8d1410;
+  --app-color-action-danger-hover: #e58f85;
+
+  --app-bg-gradient: radial-gradient(circle at top right, rgba(17, 74, 137, 0.1) 0%, var(--app-color-bg) 52%);
+  --app-color-border-soft: rgba(15, 26, 42, 0.12);
+  --app-color-border-regular: rgba(15, 26, 42, 0.18);
+  --app-color-border-strong: rgba(17, 74, 137, 0.35);
+  --app-color-hover-soft: rgba(15, 26, 42, 0.08);
+  --app-color-panel-soft: rgba(17, 74, 137, 0.08);
+  --app-color-panel-mid: rgba(17, 74, 137, 0.14);
+  --app-color-header-bg: rgba(255, 255, 255, 0.75);
+  --app-color-header-bg-scrolled: rgba(255, 255, 255, 0.96);
+  --app-color-input-bg: rgba(17, 74, 137, 0.06);
+  --app-color-input-bg-focus: rgba(17, 74, 137, 0.12);
+  --app-color-input-border: rgba(17, 74, 137, 0.22);
+  --app-color-input-focus-border: rgba(17, 74, 137, 0.45);
+  --app-color-focus-ring: rgba(17, 74, 137, 0.18);
+  --app-color-image-overlay: linear-gradient(to top, rgba(9, 22, 40, 0.52), transparent);
+  --app-color-card-tint: rgba(255, 255, 255, 0.9);
+  --app-color-bookmark-border: rgba(17, 74, 137, 0.32);
+  --app-color-bookmark-bg: rgba(255, 255, 255, 0.84);
+  --app-color-bookmark-bg-hover: rgba(255, 255, 255, 0.98);
+  --app-color-bookmark-fg: #0f1a2a;
+
+  --app-pricing-page-bg:
+    radial-gradient(circle at 15% 0%, rgba(17, 74, 137, 0.14), transparent 42%),
+    radial-gradient(circle at 85% 20%, rgba(14, 106, 89, 0.12), transparent 44%),
+    linear-gradient(180deg, #eef4fc 0%, #eaf1fa 36%, #e5edf8 100%);
+  --app-pricing-card-bg:
+    radial-gradient(circle at top right, rgba(17, 74, 137, 0.08), transparent 55%),
+    linear-gradient(160deg, rgba(14, 106, 89, 0.08), rgba(255, 255, 255, 0.96));
+  --app-pricing-card-popular-bg:
+    radial-gradient(circle at top right, rgba(17, 74, 137, 0.12), transparent 58%),
+    linear-gradient(160deg, rgba(17, 74, 137, 0.16), rgba(255, 255, 255, 0.98));
+  --app-pricing-comparison-bg: rgba(17, 74, 137, 0.08);
+  --app-pricing-table-head-bg: rgba(17, 74, 137, 0.12);
+  --app-pricing-faq-section-bg: rgba(14, 106, 89, 0.08);
+  --app-pricing-faq-icon-bg: rgba(17, 74, 137, 0.12);
+  --app-pricing-final-cta-bg:
+    radial-gradient(circle at top right, rgba(161, 26, 22, 0.1), transparent 45%),
+    linear-gradient(150deg, rgba(17, 74, 137, 0.18), rgba(255, 255, 255, 0.98));
+
+  --app-section-bg-hero:
+    radial-gradient(64rem 30rem at -5% 0%, rgba(17, 74, 137, 0.15), transparent 56%),
+    radial-gradient(42rem 24rem at 110% 20%, rgba(14, 106, 89, 0.11), transparent 58%),
+    linear-gradient(180deg, #f3f7fd 0%, #e8f0fb 54%, #e2ebf8 100%);
+  --app-section-bg-featured:
+    radial-gradient(56rem 26rem at 12% -8%, rgba(17, 74, 137, 0.12), transparent 58%),
+    radial-gradient(40rem 24rem at 90% 26%, rgba(216, 161, 0, 0.1), transparent 62%),
+    linear-gradient(165deg, #f8fbff 0%, #edf4fd 55%, #e8f0fb 100%);
+  --app-section-bg-micro:
+    radial-gradient(52rem 30rem at 0% 10%, rgba(14, 106, 89, 0.1), transparent 58%),
+    radial-gradient(48rem 24rem at 95% 15%, rgba(17, 74, 137, 0.11), transparent 60%),
+    linear-gradient(160deg, #f6faff 0%, #ebf3fd 58%, #e6eef9 100%);
+  --app-section-bg-testimonials:
+    radial-gradient(62rem 30rem at 20% -15%, rgba(216, 161, 0, 0.12), transparent 62%),
+    radial-gradient(40rem 22rem at 100% 20%, rgba(17, 74, 137, 0.1), transparent 60%),
+    linear-gradient(170deg, #f8fbff 0%, #eef4fb 52%, #e8f0fb 100%);
+  --app-section-bg-enrollment:
+    radial-gradient(58rem 30rem at -10% 0%, rgba(17, 74, 137, 0.14), transparent 58%),
+    radial-gradient(42rem 24rem at 100% 18%, rgba(216, 161, 0, 0.11), transparent 62%),
+    linear-gradient(165deg, #f5f9ff 0%, #eaf2fd 56%, #e3ecfa 100%);
+
+  --app-shadow-institutional: 0 16px 36px -16px rgba(9, 22, 40, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --app-shadow-hover: 0 24px 48px -20px rgba(17, 74, 137, 0.24), 0 0 24px rgba(17, 74, 137, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  --app-shadow-soft: 0 10px 20px rgba(9, 22, 40, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--app-font-body);
+  background: var(--app-bg-gradient);
+  color: var(--app-color-fg);
+  min-height: 100vh;
+}
+
+.home-hero-featured-surface {
+  background: var(--app-section-bg-hero);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.home-headline {
+  font-family: var(--app-font-headline);
+  letter-spacing: -0.02em;
+}
+
+/* --- Reveal Animations --- */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--app-color-primary);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
