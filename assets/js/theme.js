@@ -79,27 +79,29 @@
 
   function setupToggle(root) {
     const scope = root || document;
-    const toggleButton = scope.querySelector('[data-theme-toggle]');
+    const toggleButtons = Array.from(scope.querySelectorAll('[data-theme-toggle]'));
     syncThemeAssets(getActiveTheme(), scope);
 
-    if (!toggleButton) {
+    if (toggleButtons.length === 0) {
       return;
     }
 
-    if (toggleButton.dataset.themeBound === 'true') {
+    toggleButtons.forEach((toggleButton) => {
       updateToggleUI(toggleButton, getActiveTheme());
-      return;
-    }
 
-    toggleButton.dataset.themeBound = 'true';
-    updateToggleUI(toggleButton, getActiveTheme());
+      if (toggleButton.dataset.themeBound === 'true') {
+        return;
+      }
 
-    toggleButton.addEventListener('click', () => {
-      const currentTheme = getActiveTheme();
-      const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-      applyTheme(nextTheme);
-      writeStoredTheme(nextTheme);
-      updateToggleUI(toggleButton, nextTheme);
+      toggleButton.dataset.themeBound = 'true';
+
+      toggleButton.addEventListener('click', () => {
+        const currentTheme = getActiveTheme();
+        const nextTheme = currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+        applyTheme(nextTheme);
+        writeStoredTheme(nextTheme);
+        toggleButtons.forEach((button) => updateToggleUI(button, nextTheme));
+      });
     });
   }
 

@@ -73,21 +73,72 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" data-mobile-nav-overlay></div>
-    <nav class="mobile-nav-drawer" id="mobile-nav-drawer" data-mobile-nav-drawer aria-label="Mobile navigation">
-      <ul class="mobile-nav-list">
-        <li class="mobile-nav-item">
-          <a class="mobile-nav-link mobile-nav-link-active" href="/reinforceDemo/">Courses</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a class="mobile-nav-link" href="/reinforceDemo/">Micro Credentials</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a class="mobile-nav-link" href="/reinforceDemo/">Instructors</a>
-        </li>
-        <li class="mobile-nav-item">
-          <a class="mobile-nav-link" href="/reinforceDemo/pages/pricing/">Plans</a>
-        </li>
-      </ul>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer" data-mobile-nav-drawer aria-label="Mobile navigation" aria-hidden="true">
+      <div class="mobile-nav-content" data-mobile-nav-content>
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-nav-link-active" href="/reinforceDemo/">Courses</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="/reinforceDemo/">Micro Credentials</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="/reinforceDemo/">Instructors</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a class="mobile-nav-link" href="/reinforceDemo/pages/pricing/">Plans</a>
+          </li>
+        </ul>
+
+        <div class="mobile-nav-actions" aria-label="Mobile header actions">
+          <div class="mobile-search-wrap">
+            <input class="mobile-search-input" type="text" placeholder="Search knowledge..." aria-label="Search knowledge" />
+            <span class="mobile-search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+            </span>
+          </div>
+
+          <div class="mobile-utility-grid" role="group" aria-label="Utility actions">
+            <button class="mobile-utility-btn" type="button" aria-label="Change language" data-language-toggle>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="mobile-utility-label home-headline">Language</span>
+            </button>
+
+            <button class="mobile-utility-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <span class="mobile-utility-label home-headline" data-theme-toggle-label>Light</span>
+            </button>
+
+            <button class="mobile-utility-btn" type="button" aria-label="Account">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="10" r="3"></circle>
+                <path d="M7 20.7a7 7 0 0 1 10 0"></path>
+              </svg>
+              <span class="mobile-utility-label home-headline">Account</span>
+            </button>
+          </div>
+
+          <a class="join-btn home-headline mobile-join-btn" href="/reinforceDemo/">Join Now</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
