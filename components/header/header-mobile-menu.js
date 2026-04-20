@@ -29,6 +29,7 @@ const MobileMenu = (() => {
   let onToggleClick = null;
   let onOverlayClick = null;
   let onDocumentKeydown = null;
+  let onDocumentPointerdown = null;
   let onWindowResize = null;
   let onDrawerWheel = null;
   let onDrawerClick = null;
@@ -89,6 +90,23 @@ const MobileMenu = (() => {
       }
     };
 
+    onDocumentPointerdown = (event) => {
+      if (!isMenuOpen) {
+        return;
+      }
+
+      const target = event.target;
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      if (menuDrawer.contains(target) || menuToggle.contains(target)) {
+        return;
+      }
+
+      close({ restoreFocus: false });
+    };
+
     onWindowResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
@@ -123,6 +141,7 @@ const MobileMenu = (() => {
     menuDrawer.addEventListener('click', onDrawerClick);
 
     document.addEventListener('keydown', onDocumentKeydown);
+    document.addEventListener('pointerdown', onDocumentPointerdown);
     window.addEventListener('resize', onWindowResize);
 
     // Prevent scroll propagation on drawer
@@ -304,6 +323,9 @@ const MobileMenu = (() => {
     if (onDocumentKeydown) {
       document.removeEventListener('keydown', onDocumentKeydown);
     }
+    if (onDocumentPointerdown) {
+      document.removeEventListener('pointerdown', onDocumentPointerdown);
+    }
     if (onWindowResize) {
       window.removeEventListener('resize', onWindowResize);
     }
@@ -321,6 +343,7 @@ const MobileMenu = (() => {
     onToggleClick = null;
     onOverlayClick = null;
     onDocumentKeydown = null;
+    onDocumentPointerdown = null;
     onWindowResize = null;
     onDrawerWheel = null;
     onDrawerClick = null;
