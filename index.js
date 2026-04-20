@@ -46,6 +46,28 @@ async function mountComponent(mountId, partialPath) {
   return mountNode.firstElementChild;
 }
 
+/**
+ * Dynamically load and initialize the mobile menu system
+ */
+async function initMobileMenu() {
+  try {
+    const response = await fetch('./components/header/header-mobile-menu.js', { cache: 'no-store' });
+    if (response.ok) {
+      const scriptText = await response.text();
+      const script = document.createElement('script');
+      script.textContent = scriptText;
+      document.head.appendChild(script);
+      
+      // Initialize the mobile menu after script is loaded
+      if (window.MobileMenu) {
+        window.MobileMenu.init();
+      }
+    }
+  } catch (error) {
+    console.error('Failed to load mobile menu script:', error);
+  }
+}
+
 async function composeHomePage() {
   if (window.location.protocol === 'file:') {
     renderBootstrapMessage(
@@ -61,6 +83,8 @@ async function composeHomePage() {
       window.AppTheme.initTheme();
       window.AppTheme.setupToggle(document);
     }
+    // Initialize mobile menu after header is mounted
+    await initMobileMenu();
     await mountComponent('hero-mount', './components/hero/hero.html');
     await mountComponent('trusted-by-mount', './components/trusted-by/trusted-by.html');
     await mountComponent('featured-courses-mount', './components/featured-courses/featured-courses.html');
