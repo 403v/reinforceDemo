@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/reinforceDemo/assets/images/logo/Reinforce-favicon.png" />
+    <title>Profile Dashboard - Reinforce</title>
+    <script>
+      (function applyStoredTheme() {
+        try {
+          var savedTheme = localStorage.getItem('app-theme');
+          if (savedTheme === 'light' || savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          }
+        } catch (error) {
+          // Ignore storage access failures.
+        }
+      })();
+    </script>
+    <script>
+      (function applyStoredLanguage() {
+        try {
+          var savedLanguage = localStorage.getItem('app-language');
+          var language = savedLanguage === 'ar' ? 'ar' : 'en';
+          document.documentElement.setAttribute('lang', language);
+          document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
+        } catch (error) {
+          document.documentElement.setAttribute('lang', 'en');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/reinforceDemo/assets/styles/global.css" />
+    <link rel="stylesheet" href="/reinforceDemo/components/header/header.css" />
+    <link rel="stylesheet" href="/reinforceDemo/components/footer/footer.css" />
+    <link rel="stylesheet" href="./profile-page.css" />
+    <script defer src="/reinforceDemo/assets/js/theme.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app-profile-page" class="profile-page">
+      <div id="header-mount" data-component="header" aria-live="polite"></div>
+
+      <main class="profile-main">
+        <button class="profile-sidebar-toggle home-headline" type="button" data-profile-sidebar-toggle aria-controls="profile-sidebar" aria-expanded="false">
+          <span class="profile-sidebar-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+            </svg>
+          </span>
+          Profile Menu
+        </button>
+
+        <div class="container profile-shell">
+          <aside class="profile-sidebar" id="profile-sidebar" data-profile-sidebar aria-label="Profile navigation" aria-hidden="true">
+            <div class="profile-sidebar-card">
+              <div class="profile-summary">
+                <img class="profile-avatar" src="/reinforceDemo/assets/images/instructorsImages/mohamed-adnan-jaber-hammouri.jpg" alt="Student profile image" />
+                <div>
+                  <p class="profile-welcome">Welcome,</p>
+                  <h1 class="profile-name home-headline">Sara Al-Mansouri</h1>
+                  <p class="profile-role">AOU Graduate Learner</p>
+                </div>
+              </div>
+
+              <nav class="profile-nav" aria-label="Profile sections">
+                <a class="profile-nav-link is-active" href="#dashboard" aria-current="page">
+                  <span class="profile-nav-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
+                  </span>
+                  Dashboard
+                </a>
+                <a class="profile-nav-link" href="#certificates">
+                  <span class="profile-nav-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v8H7z"></path><path d="M8 15l4-2 4 2"></path><circle cx="12" cy="17" r="3"></circle></svg>
+                  </span>
+                  Certificates
+                </a>
+                <a class="profile-nav-link" href="#messages">
+                  <span class="profile-nav-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  </span>
+                  Messages
+                </a>
+                <a class="profile-nav-link" href="#settings">
+                  <span class="profile-nav-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 0 1-1.4 3.4h-.1a1.7 1.7 0 0 0-1.5 1.1 2 2 0 0 1-3.1 1.2l-.1-.1a1.7 1.7 0 0 0-1.8 0l-.1.1a2 2 0 0 1-3.1-1.2 1.7 1.7 0 0 0-1.5-1.1h-.1A2 2 0 0 1 4 16.9l.1-.1a1.7 1.7 0 0 0 .3-1.8l-.1-.1a2 2 0 0 1 0-2.2l.1-.1A1.7 1.7 0 0 0 4.1 11 2 2 0 0 1 5.6 7.6h.1a1.7 1.7 0 0 0 1.5-1.1 2 2 0 0 1 3.1-1.2l.1.1a1.7 1.7 0 0 0 1.8 0l.1-.1a2 2 0 0 1 3.1 1.2 1.7 1.7 0 0 0 1.5 1.1h.1A2 2 0 0 1 20 10.9l-.1.1a1.7 1.7 0 0 0-.3 1.8z"></path></svg>
+                  </span>
+                  Settings
+                </a>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="profile-content" id="dashboard">
+            <section class="profile-hero-card reveal-up">
+              <div class="profile-hero-progress">
+                <div class="progress-ring" role="img" aria-label="Overall mastery 74 percent">
+                  <svg viewBox="0 0 120 120" class="progress-ring-svg" aria-hidden="true">
+                    <circle class="progress-ring-track" cx="60" cy="60" r="46"></circle>
+                    <circle class="progress-ring-bar" cx="60" cy="60" r="46" data-progress-ring></circle>
+                  </svg>
+                  <div class="progress-ring-copy">
+                    <strong class="progress-ring-value home-headline" data-progress-value>74%</strong>
+                    <span class="progress-ring-label">Overall Mastery</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-hero-copy">
+                <p class="section-eyebrow reveal-up stagger-1">Learning Progress</p>
+                <h2 class="section-title home-headline reveal-up stagger-2">Keep momentum with the next lesson already queued</h2>
+                <p class="profile-hero-summary reveal-up stagger-3">
+                  You are close to certification. Continue from the exact point where your progress will compound fastest, with a clean path to finish the remaining chapters.
+                </p>
+
+                <div class="profile-hero-callout reveal-up stagger-4">
+                  <span class="profile-hero-callout-label">12 Chapters Until Certification</span>
+                  <span class="profile-hero-callout-value">Finish the next milestone to unlock the final assessment.</span>
+                </div>
+
+                <div class="profile-hero-actions reveal-up stagger-4">
+                  <a class="primary-cta" href="#continue-learning">Resume Learning</a>
+                  <a class="secondary-cta" href="#syllabus">View Syllabus</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="profile-section profile-continue-section reveal-up stagger-2" id="continue-learning">
+              <div class="section-heading">
+                <p class="section-eyebrow">Continue Learning</p>
+                <h2 class="section-title home-headline">Resume your active course</h2>
+              </div>
+
+              <article class="continue-card">
+                <img class="continue-card-image" src="/reinforceDemo/assets/images/FeaturedCourses/Cybercrime.jpg" alt="Course thumbnail for Cybercrime Investigation" />
+                <div class="continue-card-body">
+                  <div class="continue-card-topline">
+                    <div>
+                      <h3 class="home-headline">Cybercrime Investigation</h3>
+                      <p class="continue-card-meta">Last lesson accessed: Evidence Collection Workflow</p>
+                    </div>
+                    <span class="continue-card-badge">74% complete</span>
+                  </div>
+
+                  <div class="progress-bar" aria-hidden="true"><span class="progress-bar-fill" style="width: 74%;"></span></div>
+                  <p class="continue-card-note">Next up: reviewing chain of custody examples and the reporting template.</p>
+
+                  <div class="continue-card-footer">
+                    <span class="continue-card-time">18 minutes left in the next lesson</span>
+                    <a class="primary-cta" href="#">Resume</a>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <section class="profile-stats-section reveal-up stagger-1" id="certificates" aria-labelledby="profile-stats-title">
+              <div class="section-heading">
+                <p class="section-eyebrow">Overview</p>
+                <h2 class="section-title home-headline" id="profile-stats-title">Learning at a glance</h2>
+              </div>
+
+              <div class="profile-stats-grid">
+                <article class="profile-stat-card">
+                  <span class="profile-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M5 6h14"></path></svg>
+                  </span>
+                  <strong class="profile-stat-value home-headline">8</strong>
+                  <span class="profile-stat-label">Courses Enrolled</span>
+                </article>
+
+                <article class="profile-stat-card">
+                  <span class="profile-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                  </span>
+                  <strong class="profile-stat-value home-headline">5</strong>
+                  <span class="profile-stat-label">Courses Completed</span>
+                </article>
+
+                <article class="profile-stat-card">
+                  <span class="profile-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                  </span>
+                  <strong class="profile-stat-value home-headline">74h</strong>
+                  <span class="profile-stat-label">Total Time Spent Learning</span>
+                </article>
+
+                <article class="profile-stat-card">
+                  <span class="profile-stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v8H7z"></path><path d="M8 15l4-2 4 2"></path><circle cx="12" cy="17" r="3"></circle></svg>
+                  </span>
+                  <strong class="profile-stat-value home-headline">3</strong>
+                  <span class="profile-stat-label">Certificates Earned</span>
+                </article>
+              </div>
+            </section>
+
+            <section class="profile-section reveal-up stagger-3" id="syllabus">
+              <div class="section-heading">
+                <p class="section-eyebrow">Academic Calendar</p>
+                <h2 class="section-title home-headline">Upcoming deadlines and sessions</h2>
+              </div>
+
+              <div class="calendar-list">
+                <article class="calendar-item is-highlighted">
+                  <div class="calendar-date"><span>23</span><small>Apr</small></div>
+                  <div class="calendar-copy">
+                    <h3 class="home-headline">Live mentoring session</h3>
+                    <p>10:00 AM - Portfolio review and certification guidance.</p>
+                  </div>
+                </article>
+
+                <article class="calendar-item">
+                  <div class="calendar-date"><span>26</span><small>Apr</small></div>
+                  <div class="calendar-copy">
+                    <h3 class="home-headline">Chapter 7 deadline</h3>
+                    <p>Submit the investigation walkthrough quiz before midnight.</p>
+                  </div>
+                </article>
+
+                <article class="calendar-item">
+                  <div class="calendar-date"><span>29</span><small>Apr</small></div>
+                  <div class="calendar-copy">
+                    <h3 class="home-headline">Mock exam window</h3>
+                    <p>Practice assessment opens for two days with instant feedback.</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="profile-grid-section">
+              <article class="profile-section reveal-up stagger-4" id="messages">
+                <div class="section-heading">
+                  <p class="section-eyebrow">Recent Activity</p>
+                  <h2 class="section-title home-headline">What happened recently</h2>
+                </div>
+
+                <div class="activity-timeline">
+                  <article class="activity-item">
+                    <span class="activity-marker"></span>
+                    <div>
+                      <strong class="home-headline">Earned certificate</strong>
+                      <p>Completed the Security Foundations badge yesterday.</p>
+                    </div>
+                  </article>
+
+                  <article class="activity-item">
+                    <span class="activity-marker"></span>
+                    <div>
+                      <strong class="home-headline">Started lesson</strong>
+                      <p>Opened the Evidence Collection Workflow module 2 hours ago.</p>
+                    </div>
+                  </article>
+
+                  <article class="activity-item">
+                    <span class="activity-marker"></span>
+                    <div>
+                      <strong class="home-headline">Completed course</strong>
+                      <p>Finished Digital Safety Essentials earlier this week.</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="profile-section reveal-up stagger-4" id="settings">
+                <div class="section-heading">
+                  <p class="section-eyebrow">Recommended Courses</p>
+                  <h2 class="section-title home-headline">Personalized next steps</h2>
+                </div>
+
+                <div class="course-rail" aria-label="Recommended courses">
+                  <article class="mini-course-card">
+                    <img src="/reinforceDemo/assets/images/FeaturedCourses/blockchain.jpg" alt="Blockchain Fundamentals course thumbnail" />
+                    <div>
+                      <h3 class="home-headline">Blockchain Fundamentals</h3>
+                      <p>Strengthen your understanding of trust models and real-world use cases.</p>
+                    </div>
+                  </article>
+
+                  <article class="mini-course-card">
+                    <img src="/reinforceDemo/assets/images/TopCourses/EthicalH.jpg" alt="Ethical Hacking Essentials course thumbnail" />
+                    <div>
+                      <h3 class="home-headline">Ethical Hacking Essentials</h3>
+                      <p>Move into advanced defense practice with guided labs and checkpoints.</p>
+                    </div>
+                  </article>
+
+                  <article class="mini-course-card">
+                    <img src="/reinforceDemo/assets/images/FeaturedCourses/Enternship.jpg" alt="Professional internship course thumbnail" />
+                    <div>
+                      <h3 class="home-headline">Professional Internship Prep</h3>
+                      <p>Bridge your current progress into career-ready project work.</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+
+        <div class="profile-sidebar-overlay" data-profile-sidebar-overlay hidden></div>
+      </main>
+
+      <div id="footer-mount" data-component="footer" aria-live="polite"></div>
+    </div>
+  </body>
+</html>

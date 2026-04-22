@@ -3,6 +3,7 @@
 .instructor-details-page {
   color: var(--app-color-on-surface);
   min-height: 100vh;
+  overflow-x: clip;
   background: var(--app-bg-gradient);
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
@@ -27,6 +28,7 @@
 .mentor-cta-card {
   display: grid;
   gap: 1.5rem;
+  min-width: 0;
 }
 .instructor-hero-inner {
   align-items: center;
@@ -343,12 +345,14 @@ html[data-theme='light'] .expertise-section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
+  min-width: 0;
 }
 
 @media (max-width: 1023px) {
   .courses-grid {
     display: flex;
     gap: 1rem;
+    max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
